@@ -226,10 +226,17 @@ int main() {
 		}
 		std::cout << "\n";
 	}
+	
+	// 
 	std::cin.get();
-	/*Sleep(1000);
+	Sleep(1000);
 	deletelastlines(mapy+1);
+	bool willDelete = false;
 	while(posx != startx || posy != starty) {
+		if (willDelete) {
+			deletelastlines(mapy);
+		}
+		else willDelete = true;
 		int newposx = pathmap[posy][posx].pathx;
 		int newposy = pathmap[posy][posx].pathy;
 		posx = newposx;
@@ -246,12 +253,11 @@ int main() {
 			}
 			std::cout << "\n";
 		}
-		deletelastlines(mapy);
-	}*/
+	}
 	
 	// printing
 	
-	for(int i = 0; i < mapy; i++) { // intmap
+	/*for(int i = 0; i < mapy; i++) { // intmap
 		for(int j = 0; j < mapx; j++) {
 			if (intmap[i][j] == 3) SetConsoleTextAttribute(hConsole, 12);
 			if (intmap[i][j] == 0) SetConsoleTextAttribute(hConsole, 15);
@@ -260,7 +266,7 @@ int main() {
 			std::cout << pathmap[i][j].fcost << "\t";
 		}
 		std::cout << "\n\n\n\n";
-	}
+	}*/
 	std::cout << "-------\n";
 	
 	system("pause");
